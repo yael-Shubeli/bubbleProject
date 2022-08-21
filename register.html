@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>register</title>
+</head>
+
+<body>
+    <div class="main">
+        <img id="back_img"
+            src="https://images.ctfassets.net/j95d1p8hsuun/6clz3zM5N8vwE3onEbKbrz/51558d14fde4ea4e94b1213e66499d1f/NW-about-mob.png">
+        <p id="p">Please enter a new username:</p>
+        <br />
+        <input type="text" id="username" placeholder="Enter here">
+        <br />
+        <p id="c_p">Confirm the username:</p>
+        <input type="text" id="c_username" placeholder="Enter here">
+
+        <!-- <form action="gmaeScreen.html"> -->
+            <button id="submit" >Register</button>
+        <!-- </form> -->
+
+    </div>
+
+    <script>
+        let submit = document.getElementById("submit");
+        submit.addEventListener("click", registerUser);
+
+
+        function registerUser(){
+            //get values
+            let username = document.getElementById("username");
+            let c_username = document.getElementById("c_username");
+            let is_allowed = true;
+            //validation
+            if(username.value === ""){
+                is_allowed = false;
+                username.style.borderColor = "red";
+            }else{
+                username.style.borderColor = "#ccc";
+            }
+
+            if(c_username.value === ""){
+                is_allowed=false;
+                c_username.style.borderColor = "red";
+            }else{
+                c_username.style.borderColor = "#ccc";
+            }
+
+            //validate that both values are the same
+            if(username.value !== c_username.value){
+                username.style.borderColor = "red";
+                c_username.style.borderColor = "red";
+
+            }else{
+                //are same
+                username.style.borderColor = "#ccc";
+                c_username.style.borderColor = "#ccc";
+            }
+
+            if(is_allowed) {
+                
+            }else{
+
+            }
+
+            // let reg = /^[a- zA-Z\-]+$/;
+            // if(reg.test(username.value)=== false){
+            //     username.style.borderColor = "red";
+            // }else{
+            //     c_username.style.borderColor = "#ccc";
+
+            // }
+
+
+
+
+
+        }
+         
+
+    </script>
+
+</body>
+
+</html>
