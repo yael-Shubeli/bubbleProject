@@ -1,0 +1,13 @@
+body {
+    background-image: url("https://images.ctfassets.net/j95d1p8hsuun/6clz3zM5N8vwE3onEbKbrz/51558d14fde4ea4e94b1213e66499d1f/NW-about-mob.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    position:absolute; top:0px; left:0px;
+    overflow: hidden;
+    position: fixed;
+    /* width: 500%; */
+    /* height: 500%; */
+    /* background: ; */
+    /* background-image: url("img_tree.gif"); */
+}
